@@ -211,7 +211,7 @@ class VideoPlayerView: NSObject, FlutterPlatformView, PlayerViewDelegate {
     }
     
     func showToast(message:String, type:ToastType = ToastType.warning) {
-        let appleToastView = AppleToastView(child: CustomTextToastView(message),minHeight: 32, darkBackgroundColor: type.toColor(), lightBackgroundColor:type.toColor())
+        let appleToastView = AppleToastView(child: CustomTextToastView(message))
         let toast = Toast.custom(view: appleToastView)
         toast.show()
     }
